@@ -9,10 +9,10 @@ jobs:
   run:
     runs-on: ubuntu-18.04
     steps:
-      - uses: ntigo/lang-box/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Setup Node
-        uses: ntigo/lang-box/setup-node@v2
+        uses: actions/setup-node@v2
         with:
           node-version: "16.x"
 
@@ -32,4 +32,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
-          USERNAME: ${{ github.actor }}
+          USERNAME: ntigo
